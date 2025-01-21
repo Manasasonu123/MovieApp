@@ -51,7 +51,8 @@
             android:layout_margin="8dp"
             android:entries="@array/year_options"
             android:spinnerMode="dropdown"
-            android:dropDownHeight="50dp"/>
+            android:dropDownHeight="100dp"
+            android:dropDownWidth="200dp" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

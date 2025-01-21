@@ -8,19 +8,24 @@ import retrofit2.http.Query
 
 interface MovieInterface {
 
-
     @GET("/")
     suspend fun getAllMovies(
-        @Query("s")s:String,
-        @Query("page")page:Int,
-        @Query("apiKey")apiKey:String
-    ):Response<MovieResponse>
+        @Query("s") s: String,
+        @Query("page") page: Int,
+        @Query("apiKey") apiKey: String
+    ): Response<MovieResponse>
 
     @GET("/")
     suspend fun getMovieDetails(
-        @Query("i")imdbID:String,
-        @Query("apiKey")apiKey:String
-    ):Response<MovieDetails>
+        @Query("i") imdbID: String,
+        @Query("apiKey") apiKey: String
+    ): Response<MovieDetails>
 
-
+    @GET("/")
+    suspend fun getAllMoviesYear(
+        @Query("s") query: String,
+        @Query("page") page: Int,
+        @Query("apiKey") apiKey: String,
+        @Query("y") year: String?
+    ): Response<MovieResponse>
 }
